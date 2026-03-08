@@ -1,7 +1,8 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Code2, Users, Calendar } from "lucide-react";
+import { GraduationCap, Briefcase, Code2, Calendar, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const workExperience = [
   {
