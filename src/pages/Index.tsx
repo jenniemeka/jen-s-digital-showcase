@@ -75,7 +75,7 @@ const Index = () => {
                 transition={{ delay: 0.6, duration: 0.5 }}
                 className="flex flex-wrap gap-4"
               >
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)] hover:shadow-[0_0_40px_-5px_hsl(270_70%_60%/0.6)] transition-shadow">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)] hover:shadow-[0_0_40px_-5px_hsl(25_95%_60%/0.6)] transition-shadow">
                   <Link to="/projects">
                     View Projects <ArrowRight className="ml-2" size={18} />
                   </Link>
