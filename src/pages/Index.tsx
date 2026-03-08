@@ -121,7 +121,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(270_70%_60%/0.2)]"
+              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(25_95%_60%/0.2)]"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <skill.icon className="text-primary" size={24} />
