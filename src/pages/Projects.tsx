@@ -41,13 +41,6 @@ const projects = [
 const Projects = () => {
   return (
     <div className="min-h-screen pt-24 relative overflow-hidden">
-      {/* Google-style animated gradient blobs */}
-      <div className="fixed inset-0 -z-10 pointer-events-none">
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-        <div className="blob blob-4" />
-      </div>
 
       <Section>
         <SectionHeading title="Projects" subtitle="Products I've built and co-founded to solve real problems." />
