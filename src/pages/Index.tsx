@@ -6,9 +6,9 @@ import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 
 const projects = [
-  { name: "Tymflow", desc: "Digital workflow platform for productivity", url: "https://tymflow.vercel.app" },
-  { name: "Programmify Academy", desc: "Learn programming through mentorship", url: "https://academy.programmify.org" },
-  { name: "Tendly", desc: "Privacy-first file sharing platform", url: "https://tendly.xyz" },
+  { name: "Tymflow", desc: "Digital workflow platform for productivity", url: "https://tymflow.vercel.app", image: "/images/tymflow.png" },
+  { name: "Programmify Academy", desc: "Learn programming through mentorship", url: "https://academy.programmify.org", image: "/images/programmify.png" },
+  { name: "Tendly", desc: "Privacy-first file sharing platform", url: "https://tendly.xyz", image: "/images/tendly.png" },
 ];
 
 const skills = [
@@ -20,12 +20,17 @@ const skills = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Google-style animated gradient blobs */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <div className="blob blob-1" />
+        <div className="blob blob-2" />
+        <div className="blob blob-3" />
+        <div className="blob blob-4" />
+      </div>
+
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
-        
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -34,23 +39,38 @@ const Index = () => {
             className="max-w-3xl"
           >
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
               className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
             >
               Developer · Mentor · Founder
             </motion.p>
-            <h1 className="text-5xl md:text-7xl font-bold font-display leading-tight mb-6">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.7 }}
+              className="text-5xl md:text-7xl font-bold font-display leading-tight mb-6"
+            >
               Jennifer{" "}
               <span className="text-gradient">Oluomachi</span>{" "}
               Omojo
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+            >
               I build digital products, teach people how to code, and create tools that empower individuals and communities.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)] hover:shadow-[0_0_40px_-5px_hsl(270_70%_60%/0.6)] transition-shadow">
                 <Link to="/projects">
                   View Projects <ArrowRight className="ml-2" size={18} />
                 </Link>
@@ -58,7 +78,7 @@ const Index = () => {
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 border-border hover:bg-secondary">
                 <Link to="/contact">Get In Touch</Link>
               </Button>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -74,9 +94,12 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group"
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(270_70%_60%/0.2)]"
             >
-              <skill.icon className="text-primary mb-4" size={28} />
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <skill.icon className="text-primary" size={24} />
+              </div>
               <h3 className="font-display font-semibold text-lg mb-2">{skill.label}</h3>
               <p className="text-sm text-muted-foreground">{skill.desc}</p>
             </motion.div>
@@ -98,13 +121,26 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group cursor-pointer"
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+              className="glass rounded-xl overflow-hidden hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_20px_50px_-15px_hsl(270_70%_60%/0.2)]"
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-display font-semibold text-lg">{project.name}</h3>
-                <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+              {/* Preview Image */}
+              <div className="relative overflow-hidden aspect-video">
+                <img
+                  src={project.image}
+                  alt={`${project.name} preview`}
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
-              <p className="text-sm text-muted-foreground">{project.desc}</p>
+              <div className="p-5">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-display font-semibold text-lg">{project.name}</h3>
+                  <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                </div>
+                <p className="text-sm text-muted-foreground">{project.desc}</p>
+              </div>
             </motion.a>
           ))}
         </div>
@@ -117,8 +153,13 @@ const Index = () => {
 
       {/* Mentorship */}
       <Section>
-        <div className="glass rounded-2xl p-8 md:p-12 glow-box">
-          <div className="max-w-2xl">
+        <motion.div
+          whileHover={{ scale: 1.01, transition: { duration: 0.3 } }}
+          className="glass rounded-2xl p-8 md:p-12 glow-box relative overflow-hidden"
+        >
+          {/* Decorative gradient */}
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
+          <div className="max-w-2xl relative z-10">
             <p className="text-primary font-medium text-sm uppercase tracking-wide mb-3">Mentorship</p>
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
               Nurturing the Next Generation
@@ -130,20 +171,27 @@ const Index = () => {
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
       </Section>
 
       {/* Contact CTA */}
       <Section className="text-center">
-        <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-          Let's Build Something <span className="text-gradient">Together</span>
-        </h2>
-        <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-          Have an idea, project, or collaboration in mind? I'd love to hear from you.
-        </p>
-        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10">
-          <Link to="/contact">Get In Touch</Link>
-        </Button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+            Let's Build Something <span className="text-gradient">Together</span>
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+            Have an idea, project, or collaboration in mind? I'd love to hear from you.
+          </p>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)]">
+            <Link to="/contact">Get In Touch</Link>
+          </Button>
+        </motion.div>
       </Section>
     </div>
   );
