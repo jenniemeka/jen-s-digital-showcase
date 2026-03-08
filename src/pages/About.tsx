@@ -38,7 +38,7 @@ const About = () => {
             className="flex-shrink-0"
           >
             <div className="relative">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-[0_0_50px_-10px_hsl(270_70%_60%/0.3)]">
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-[0_0_50px_-10px_hsl(25_95%_60%/0.3)]">
                 <img
                   src="/images/profile.png"
                   alt="Jennifer Oluomachi Omojo"
