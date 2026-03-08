@@ -63,7 +63,7 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.5, ease: "easeOut" }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="glass rounded-2xl overflow-hidden hover:border-primary/40 transition-all group hover:shadow-[0_20px_60px_-15px_hsl(270_70%_60%/0.25)]"
+              className="glass rounded-2xl overflow-hidden hover:border-primary/40 transition-all group hover:shadow-[0_20px_60px_-15px_hsl(25_95%_60%/0.25)]"
             >
               {/* Preview Image */}
               <div className="relative overflow-hidden aspect-video">

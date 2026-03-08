@@ -38,7 +38,7 @@ const About = () => {
             className="flex-shrink-0"
           >
             <div className="relative">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-[0_0_50px_-10px_hsl(270_70%_60%/0.3)]">
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-[0_0_50px_-10px_hsl(25_95%_60%/0.3)]">
                 <img
                   src="/images/profile.png"
                   alt="Jennifer Oluomachi Omojo"
@@ -91,7 +91,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="glass rounded-xl p-8 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(270_70%_60%/0.15)]"
+              className="glass rounded-xl p-8 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(25_95%_60%/0.15)]"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <role.icon className="text-primary" size={24} />

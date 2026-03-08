@@ -75,7 +75,7 @@ const Index = () => {
                 transition={{ delay: 0.6, duration: 0.5 }}
                 className="flex flex-wrap gap-4"
               >
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)] hover:shadow-[0_0_40px_-5px_hsl(270_70%_60%/0.6)] transition-shadow">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full px-8 shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)] hover:shadow-[0_0_40px_-5px_hsl(25_95%_60%/0.6)] transition-shadow">
                   <Link to="/projects">
                     View Projects <ArrowRight className="ml-2" size={18} />
                   </Link>
@@ -94,7 +94,7 @@ const Index = () => {
               className="flex-shrink-0"
             >
               <div className="relative">
-                <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_60px_-10px_hsl(270_70%_60%/0.35)]">
+                <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_60px_-10px_hsl(25_95%_60%/0.35)]">
                   <img
                     src="/images/profile.png"
                     alt="Jennifer Oluomachi Omojo"
@@ -121,7 +121,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(270_70%_60%/0.2)]"
+              className="glass rounded-xl p-6 hover:border-primary/30 transition-all group hover:shadow-[0_15px_40px_-10px_hsl(25_95%_60%/0.2)]"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <skill.icon className="text-primary" size={24} />
@@ -148,7 +148,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="glass rounded-xl overflow-hidden hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_20px_50px_-15px_hsl(270_70%_60%/0.2)]"
+              className="glass rounded-xl overflow-hidden hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_20px_50px_-15px_hsl(25_95%_60%/0.2)]"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img
@@ -212,7 +212,7 @@ const Index = () => {
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
             Have an idea, project, or collaboration in mind? I'd love to hear from you.
           </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)]">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]">
             <Link to="/contact">Get In Touch</Link>
           </Button>
         </motion.div>
