@@ -1,8 +1,10 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
+import PrintableResume from "@/components/PrintableResume";
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, Code2, Calendar, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRef } from "react";
 
 const workExperience = [
   {
@@ -48,6 +50,12 @@ const expertise = [
 ];
 
 const Resume = () => {
+  const resumeRef = useRef<HTMLDivElement>(null!);
+
+  const handleDownload = () => {
+    window.print();
+  };
+
   return (
     <div className="min-h-screen pt-24 relative overflow-hidden">
       <div className="fixed inset-0 -z-10 pointer-events-none">
@@ -57,98 +65,104 @@ const Resume = () => {
         <div className="blob blob-4" />
       </div>
 
-      <Section>
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-          <SectionHeading title="Resume" subtitle="Education, experience, and areas of expertise." />
-          <Button
-            onClick={() => window.print()}
-            className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)] print:hidden"
-          >
-            <Download size={16} className="mr-2" />
-            Download Resume
-          </Button>
-        </div>
+      {/* Printable resume (hidden on screen, shown on print) */}
+      <PrintableResume resumeRef={resumeRef} />
 
-        {/* Education */}
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <GraduationCap className="text-primary" size={24} />
-            <h3 className="font-display font-semibold text-xl">Education</h3>
+      {/* Web version (shown on screen, hidden on print) */}
+      <div className="print:hidden">
+        <Section>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <SectionHeading title="Resume" subtitle="Education, experience, and areas of expertise." />
+            <Button
+              onClick={handleDownload}
+              className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]"
+            >
+              <Download size={16} className="mr-2" />
+              Download Resume
+            </Button>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass rounded-xl p-6"
-          >
-            <h4 className="font-display font-semibold text-lg">Bachelor's Degree in Economics</h4>
-            <p className="text-primary text-sm font-medium">ESTAM University</p>
-            <p className="text-muted-foreground text-sm">Benin Republic</p>
-          </motion.div>
-        </div>
 
-        {/* Work Experience */}
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <Briefcase className="text-primary" size={24} />
-            <h3 className="font-display font-semibold text-xl">Work Experience</h3>
+          {/* Education */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <GraduationCap className="text-primary" size={24} />
+              <h3 className="font-display font-semibold text-xl">Education</h3>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass rounded-xl p-6"
+            >
+              <h4 className="font-display font-semibold text-lg">Bachelor's Degree in Economics</h4>
+              <p className="text-primary text-sm font-medium">ESTAM University</p>
+              <p className="text-muted-foreground text-sm">Benin Republic</p>
+            </motion.div>
           </div>
-          <div className="space-y-6">
-            {workExperience.map((job, i) => (
-              <motion.div
-                key={job.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="glass rounded-xl p-6 md:p-8 hover:border-primary/30 transition-all"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                  <div>
-                    <h4 className="font-display font-semibold text-lg">{job.title}</h4>
-                    <p className="text-primary text-sm font-medium">{job.company}</p>
+
+          {/* Work Experience */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <Briefcase className="text-primary" size={24} />
+              <h3 className="font-display font-semibold text-xl">Work Experience</h3>
+            </div>
+            <div className="space-y-6">
+              {workExperience.map((job, i) => (
+                <motion.div
+                  key={job.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="glass rounded-xl p-6 md:p-8 hover:border-primary/30 transition-all"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                    <div>
+                      <h4 className="font-display font-semibold text-lg">{job.title}</h4>
+                      <p className="text-primary text-sm font-medium">{job.company}</p>
+                    </div>
+                    <span className="flex items-center gap-1.5 text-muted-foreground text-sm shrink-0">
+                      <Calendar size={14} />
+                      {job.period}
+                    </span>
                   </div>
-                  <span className="flex items-center gap-1.5 text-muted-foreground text-sm shrink-0">
-                    <Calendar size={14} />
-                    {job.period}
-                  </span>
-                </div>
-                <ul className="space-y-2">
-                  {job.bullets.map((bullet, j) => (
-                    <li key={j} className="text-muted-foreground text-sm leading-relaxed flex gap-2">
-                      <span className="text-primary mt-1.5 shrink-0">•</span>
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+                  <ul className="space-y-2">
+                    {job.bullets.map((bullet, j) => (
+                      <li key={j} className="text-muted-foreground text-sm leading-relaxed flex gap-2">
+                        <span className="text-primary mt-1.5 shrink-0">•</span>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Expertise */}
-        <div>
-          <div className="flex items-center gap-3 mb-6">
-            <Code2 className="text-primary" size={24} />
-            <h3 className="font-display font-semibold text-xl">Areas of Expertise</h3>
+          {/* Expertise */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <Code2 className="text-primary" size={24} />
+              <h3 className="font-display font-semibold text-xl">Areas of Expertise</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {expertise.map((exp, i) => (
+                <motion.div
+                  key={exp.area}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="glass rounded-xl p-6 hover:border-primary/30 transition-all"
+                >
+                  <h4 className="font-display font-semibold text-lg mb-2">{exp.area}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{exp.desc}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {expertise.map((exp, i) => (
-              <motion.div
-                key={exp.area}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="glass rounded-xl p-6 hover:border-primary/30 transition-all"
-              >
-                <h4 className="font-display font-semibold text-lg mb-2">{exp.area}</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">{exp.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
     </div>
   );
 };
