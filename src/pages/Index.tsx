@@ -212,7 +212,7 @@ const Index = () => {
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
             Have an idea, project, or collaboration in mind? I'd love to hear from you.
           </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)]">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]">
             <Link to="/contact">Get In Touch</Link>
           </Button>
         </motion.div>

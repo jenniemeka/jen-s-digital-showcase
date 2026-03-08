@@ -62,7 +62,7 @@ const Resume = () => {
           <SectionHeading title="Resume" subtitle="Education, experience, and areas of expertise." />
           <Button
             onClick={() => window.print()}
-            className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(270_70%_60%/0.4)] print:hidden"
+            className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)] print:hidden"
           >
             <Download size={16} className="mr-2" />
             Download Resume
