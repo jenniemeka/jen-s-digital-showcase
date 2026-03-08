@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Send, Music } from "lucide-react";
+import { Github, Linkedin, Twitter, Send, Music, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -11,6 +11,11 @@ const socials = [
   { icon: Github, label: "GitHub", url: "https://github.com/Jenniemeka" },
   { icon: Twitter, label: "Twitter / X", url: "https://x.com/Jenniemeka" },
   { icon: Music, label: "TikTok", url: "https://www.tiktok.com/@jenni_emeka" },
+];
+
+const emails = [
+  "jenniferemeka24@gmail.com",
+  "jenniferoluomachiomojo@gmail.com",
 ];
 
 const Contact = () => {
@@ -27,7 +32,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative overflow-hidden">
+      {/* Google-style animated gradient blobs */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <div className="blob blob-1" />
+        <div className="blob blob-2" />
+        <div className="blob blob-3" />
+        <div className="blob blob-4" />
+      </div>
+
       <Section>
         <SectionHeading title="Get In Touch" subtitle="Have a project idea or want to collaborate? Let's talk." />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -76,14 +89,29 @@ const Contact = () => {
             </Button>
           </motion.form>
 
-          {/* Social Links */}
+          {/* Social Links & Email */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="font-display font-semibold text-xl mb-6">Connect With Me</h3>
-            <div className="space-y-4">
+            {/* Email addresses */}
+            <h3 className="font-display font-semibold text-xl mb-4">Email Me</h3>
+            <div className="space-y-3 mb-8">
+              {emails.map((addr) => (
+                <a
+                  key={addr}
+                  href={`mailto:${addr}`}
+                  className="glass rounded-xl p-4 flex items-center gap-4 hover:border-primary/30 transition-all group"
+                >
+                  <Mail className="text-primary flex-shrink-0" size={20} />
+                  <span className="font-medium text-sm group-hover:text-primary transition-colors break-all">{addr}</span>
+                </a>
+              ))}
+            </div>
+
+            <h3 className="font-display font-semibold text-xl mb-4">Connect With Me</h3>
+            <div className="space-y-3">
               {socials.map((social) => (
                 <a
                   key={social.label}
