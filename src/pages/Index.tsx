@@ -27,13 +27,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Google-style animated gradient blobs */}
-      <div className="fixed inset-0 -z-10 pointer-events-none">
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-        <div className="blob blob-4" />
-      </div>
 
       {/* Hero */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
