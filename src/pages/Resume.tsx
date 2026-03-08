@@ -58,12 +58,6 @@ const Resume = () => {
 
   return (
     <div className="min-h-screen pt-24 relative overflow-hidden">
-      <div className="fixed inset-0 -z-10 pointer-events-none">
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-        <div className="blob blob-4" />
-      </div>
 
       {/* Printable resume (hidden on screen, shown on print) */}
       <PrintableResume resumeRef={resumeRef} />
