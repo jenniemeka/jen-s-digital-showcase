@@ -148,7 +148,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="glass rounded-xl overflow-hidden hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_20px_50px_-15px_hsl(270_70%_60%/0.2)]"
+              className="glass rounded-xl overflow-hidden hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_20px_50px_-15px_hsl(25_95%_60%/0.2)]"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img
