@@ -105,6 +105,7 @@ const Resume = () => {
                 Teaching Resume
               </Button>
             </div>
+          </div>
 
           {/* Education */}
           <div className="mb-16">
