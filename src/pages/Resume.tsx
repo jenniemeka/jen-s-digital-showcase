@@ -64,16 +64,24 @@ const expertise = [
 
 const Resume = () => {
   const resumeRef = useRef<HTMLDivElement>(null!);
+  const teachingResumeRef = useRef<HTMLDivElement>(null!);
+  const [printVersion, setPrintVersion] = useState<'general' | 'teaching'>('general');
 
-  const handleDownload = () => {
-    window.print();
+  const handleDownload = (version: 'general' | 'teaching') => {
+    setPrintVersion(version);
+    setTimeout(() => window.print(), 100);
   };
 
   return (
     <div className="min-h-screen pt-24 relative overflow-hidden">
 
-      {/* Printable resume (hidden on screen, shown on print) */}
-      <PrintableResume resumeRef={resumeRef} />
+      {/* Printable resumes (hidden on screen, shown on print) */}
+      <div style={{ display: printVersion === 'general' ? undefined : 'none' }}>
+        <PrintableResume resumeRef={resumeRef} />
+      </div>
+      <div style={{ display: printVersion === 'teaching' ? undefined : 'none' }}>
+        <PrintableResumeTeaching resumeRef={teachingResumeRef} />
+      </div>
 
       {/* Web version (shown on screen, hidden on print) */}
       <div className="print:hidden">
