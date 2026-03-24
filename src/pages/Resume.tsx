@@ -8,6 +8,18 @@ import { useRef } from "react";
 
 const workExperience = [
   {
+    title: "Programming Instructor (Kids)",
+    company: "Programmify",
+    period: "Jan 2025 – Present",
+    bullets: [
+      "Taught children (ages 10–15) the fundamentals of programming including HTML, CSS, JavaScript, Python, and basic AI concepts.",
+      "Designed beginner-friendly learning materials and hands-on projects.",
+      "Guided students to build simple websites and applications.",
+      "Simplified complex technical concepts into fun and engaging lessons.",
+      "Mentored students through project-based learning and creative problem solving.",
+    ],
+  },
+  {
     title: "Co-Founder & Chief Operating Officer (COO)",
     company: "Programmify",
     period: "Jan 2023 – Present",
