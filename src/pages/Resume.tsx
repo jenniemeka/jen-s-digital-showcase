@@ -88,14 +88,23 @@ const Resume = () => {
         <Section>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <SectionHeading title="Resume" subtitle="Education, experience, and areas of expertise." />
-            <Button
-              onClick={handleDownload}
-              className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]"
-            >
-              <Download size={16} className="mr-2" />
-              Download Resume
-            </Button>
-          </div>
+            <div className="flex flex-wrap gap-3">
+              <Button
+                onClick={() => handleDownload('general')}
+                className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]"
+              >
+                <Download size={16} className="mr-2" />
+                Download Resume
+              </Button>
+              <Button
+                onClick={() => handleDownload('teaching')}
+                variant="outline"
+                className="rounded-full px-6 border-primary/40 text-primary hover:bg-primary/10"
+              >
+                <Download size={16} className="mr-2" />
+                Teaching Resume
+              </Button>
+            </div>
 
           {/* Education */}
           <div className="mb-16">
