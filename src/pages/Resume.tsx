@@ -1,10 +1,11 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import PrintableResume from "@/components/PrintableResume";
+import PrintableResumeTeaching from "@/components/PrintableResumeTeaching";
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, Code2, Calendar, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const workExperience = [
   {
@@ -63,29 +64,47 @@ const expertise = [
 
 const Resume = () => {
   const resumeRef = useRef<HTMLDivElement>(null!);
+  const teachingResumeRef = useRef<HTMLDivElement>(null!);
+  const [printVersion, setPrintVersion] = useState<'general' | 'teaching'>('general');
 
-  const handleDownload = () => {
-    window.print();
+  const handleDownload = (version: 'general' | 'teaching') => {
+    setPrintVersion(version);
+    setTimeout(() => window.print(), 100);
   };
 
   return (
     <div className="min-h-screen pt-24 relative overflow-hidden">
 
-      {/* Printable resume (hidden on screen, shown on print) */}
-      <PrintableResume resumeRef={resumeRef} />
+      {/* Printable resumes (hidden on screen, shown on print) */}
+      <div style={{ display: printVersion === 'general' ? undefined : 'none' }}>
+        <PrintableResume resumeRef={resumeRef} />
+      </div>
+      <div style={{ display: printVersion === 'teaching' ? undefined : 'none' }}>
+        <PrintableResumeTeaching resumeRef={teachingResumeRef} />
+      </div>
 
       {/* Web version (shown on screen, hidden on print) */}
       <div className="print:hidden">
         <Section>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <SectionHeading title="Resume" subtitle="Education, experience, and areas of expertise." />
-            <Button
-              onClick={handleDownload}
-              className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]"
-            >
-              <Download size={16} className="mr-2" />
-              Download Resume
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              <Button
+                onClick={() => handleDownload('general')}
+                className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]"
+              >
+                <Download size={16} className="mr-2" />
+                Download Resume
+              </Button>
+              <Button
+                onClick={() => handleDownload('teaching')}
+                variant="outline"
+                className="rounded-full px-6 border-primary/40 text-primary hover:bg-primary/10"
+              >
+                <Download size={16} className="mr-2" />
+                Teaching Resume
+              </Button>
+            </div>
           </div>
 
           {/* Education */}
