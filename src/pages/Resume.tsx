@@ -1,10 +1,11 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import PrintableResume from "@/components/PrintableResume";
+import PrintableResumeTeaching from "@/components/PrintableResumeTeaching";
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, Code2, Calendar, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const workExperience = [
   {
