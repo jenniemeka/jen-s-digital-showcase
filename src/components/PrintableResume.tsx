@@ -38,7 +38,7 @@ const PrintableResume = ({ resumeRef }: { resumeRef: React.RefObject<HTMLDivElem
           Professional Summary
         </h2>
         <p className="text-gray-700">
-          Product designer, developer, and tech founder passionate about building digital tools that solve real problems. Works at the intersection of technology, design, and education — actively building products, mentoring developers, and contributing to the African tech ecosystem.
+          Product designer, developer, and tech founder passionate about building digital tools that solve real problems. Works at the intersection of technology, design, and education - actively building products, mentoring developers, and contributing to the African tech ecosystem.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ const PrintableResume = ({ resumeRef }: { resumeRef: React.RefObject<HTMLDivElem
           Education
         </h2>
         <h3 className="font-bold text-gray-900">Bachelor's Degree in Economics</h3>
-        <p className="text-gray-600 text-[10px]">ESTAM University — Benin Republic</p>
+        <p className="text-gray-600 text-[10px]">ESTAM University - Benin Republic</p>
       </div>
 
       {/* Skills */}
