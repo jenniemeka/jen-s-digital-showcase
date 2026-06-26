@@ -121,7 +121,7 @@ const Resume = () => {
             >
               <h4 className="font-display font-semibold text-lg">Bachelor's Degree in Economics</h4>
               <p className="text-primary text-sm font-medium">ESTAM University</p>
-              <p className="text-muted-foreground text-sm">Benin Republic</p>
+              
             </motion.div>
           </div>
 

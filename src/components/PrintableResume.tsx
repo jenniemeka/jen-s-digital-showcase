@@ -22,7 +22,7 @@ const PrintableResume = ({ resumeRef }: { resumeRef: React.RefObject<HTMLDivElem
           Jennifer Oluomachi Omojo
         </h1>
         <p className="text-xs text-gray-600 mt-1">
-          Product Designer · Developer · Mentor · Tech Founder
+          AI Product Engineer · Mentor · Tech Founder
         </p>
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-0.5 mt-1.5 text-[10px] text-gray-500">
           <span>jenniferemeka24@gmail.com</span>
@@ -38,7 +38,7 @@ const PrintableResume = ({ resumeRef }: { resumeRef: React.RefObject<HTMLDivElem
           Professional Summary
         </h2>
         <p className="text-gray-700">
-          Product designer, developer, and tech founder passionate about building digital tools that solve real problems. Works at the intersection of technology, design, and education — actively building products, mentoring developers, and contributing to the African tech ecosystem.
+          AI product engineer and tech founder passionate about building digital tools that solve real problems. Works at the intersection of technology, design, and education - actively building products, mentoring developers, and contributing to the African tech ecosystem.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ const PrintableResume = ({ resumeRef }: { resumeRef: React.RefObject<HTMLDivElem
           Education
         </h2>
         <h3 className="font-bold text-gray-900">Bachelor's Degree in Economics</h3>
-        <p className="text-gray-600 text-[10px]">ESTAM University — Benin Republic</p>
+        <p className="text-gray-600 text-[10px]">ESTAM University</p>
       </div>
 
       {/* Skills */}
