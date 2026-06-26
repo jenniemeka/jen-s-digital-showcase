@@ -371,7 +371,7 @@ const Blog = () => {
                 Back to all articles
               </Button>
 
-              <article className="glass rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
+              <article className="glass rounded-2xl p-5 sm:p-8 md:p-12 max-w-3xl mx-auto">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {posts[selectedPost].tags.map((tag) => (
                     <span key={tag} className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-medium">
@@ -423,7 +423,7 @@ const Blog = () => {
                     transition={{ delay: i * 0.08 }}
                     whileHover={{ y: -4, transition: { duration: 0.2 } }}
                     onClick={() => setSelectedPost(i)}
-                    className="glass rounded-2xl p-8 hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_15px_40px_-10px_hsl(25_95%_60%/0.15)]"
+                    className="glass rounded-2xl p-5 sm:p-8 hover:border-primary/30 transition-all group cursor-pointer hover:shadow-[0_15px_40px_-10px_hsl(25_95%_60%/0.15)]"
                   >
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags.map((tag) => (
