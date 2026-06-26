@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Code2, Palette, Users, Rocket, ExternalLink, GraduationCap, Heart, BookOpen, Sparkles } from "lucide-react";
+import { ArrowRight, Code2, Palette, Users, Rocket, ExternalLink, GraduationCap, Heart, BookOpen } from "lucide-react";
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -240,7 +240,7 @@ const Index = () => {
 
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="text-primary" size={18} />
+                <BookOpen className="text-primary" size={18} />
                 <p className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wide">New Release · My First Book</p>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold font-display mb-3 leading-tight">

@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Heart, Code2, Rocket, GraduationCap, Sparkles, Users2 } from "lucide-react";
+import { Heart, Code2, Rocket, GraduationCap, Target, Users2 } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -26,7 +26,7 @@ const roles = [
 ];
 
 const values = [
-  { icon: Sparkles, title: "Build with intention", desc: "Every product should solve a real problem for real people." },
+  { icon: Target, title: "Build with intention", desc: "Every product should solve a real problem for real people." },
   { icon: Users2, title: "Lift others as I climb", desc: "Mentorship and access are how ecosystems grow." },
   { icon: Heart, title: "Stay curious, stay kind", desc: "Tech is best when it's human, warm, and useful." },
 ];
