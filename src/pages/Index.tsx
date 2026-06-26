@@ -292,6 +292,47 @@ const Index = () => {
         </motion.div>
       </Section>
 
+      {/* Always Learning */}
+      <Section className="bg-card/30">
+        <div className="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-3 space-y-5"
+          >
+            <div className="flex items-center gap-2">
+              <Lightbulb className="text-primary" size={18} />
+              <p className="text-primary font-medium text-sm uppercase tracking-wide">Always Learning</p>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold font-display leading-tight">
+              I treat curiosity as a <span className="text-gradient">daily practice.</span>
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Tech moves fast, and I move with it. I spend part of every week exploring new tools, reading research, shipping small experiments, and stretching into unfamiliar areas. Right now that means going deeper on AI engineering, agentic systems, and the workflows that will define how products get built next.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              I do not chase trends, I chase understanding. Every new skill I pick up finds its way back into the products I build and the lessons I teach.
+            </p>
+          </motion.div>
+
+          <div className="lg:col-span-2 grid grid-cols-2 gap-4">
+            {[
+              { label: "Currently learning", value: "AI agents & evals" },
+              { label: "Exploring", value: "Design engineering" },
+              { label: "Reading", value: "Research papers & changelogs" },
+              { label: "Shipping", value: "Small weekly experiments" },
+            ].map((item) => (
+              <div key={item.label} className="glass rounded-xl p-4">
+                <p className="text-[11px] uppercase tracking-wide text-muted-foreground mb-1">{item.label}</p>
+                <p className="font-display font-semibold text-sm md:text-base text-foreground">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* Contact CTA */}
       <Section className="text-center">
         <motion.div
