@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Jennifer Oluomachi Omojo. All rights reserved.
+            Built by Jennifer Oluomachi Omojo · {new Date().getFullYear()}
           </p>
           <div className="flex items-center gap-5">
             <a href="https://www.linkedin.com/in/jenniemeka" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
