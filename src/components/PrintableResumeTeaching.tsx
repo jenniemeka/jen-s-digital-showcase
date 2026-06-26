@@ -123,7 +123,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
           Education
         </h2>
         <h3 className="font-bold text-gray-900">Bachelor's Degree in Economics</h3>
-        <p className="text-gray-600 text-[11px]">ESTAM University - Benin Republic</p>
+        <p className="text-gray-600 text-[11px]">ESTAM University</p>
       </div>
 
       {/* Skills */}
