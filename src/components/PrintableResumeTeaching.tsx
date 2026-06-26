@@ -134,7 +134,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
         <div className="flex flex-wrap gap-x-2 gap-y-0.5 text-gray-700">
           {teachingSkills.map((skill, i) => (
             <span key={skill}>
-              {skill}{i < teachingSkills.length, 1 ? " ·" : ""}
+              {skill}{i < teachingSkills.length - 1 ? " ·" : ""}
             </span>
           ))}
         </div>
