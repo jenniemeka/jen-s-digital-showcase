@@ -93,7 +93,7 @@ const About = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-5 text-muted-foreground leading-relaxed">
             <p>
-              My journey into tech didn't start in a computer science classroom. I studied <strong className="text-foreground">Economics at ESTAM University</strong> in the Benin Republic, where I learned to think in systems, incentives, and trade-offs - a way of thinking that still shapes how I design products today.
+              My journey into tech didn't start in a computer science classroom. I studied <strong className="text-foreground">Economics at ESTAM University</strong>, where I learned to think in systems, incentives, and trade-offs - a way of thinking that still shapes how I design products today.
             </p>
             <p>
               Curiosity pulled me into design first. I wanted to understand why some apps felt obvious to use and others felt like a fight. That curiosity turned into Figma files, then into code, then into shipped products. Today I work across the full stack - from user research and UI design to React, TypeScript, and deploying real apps to real users.
