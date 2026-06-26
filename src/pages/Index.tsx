@@ -35,7 +35,7 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden">
 
       {/* Hero */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16 md:pt-24 md:pb-0">
+      <section ref={heroRef} className="relative md:min-h-screen flex items-center overflow-hidden pt-24 pb-12 md:pt-24 md:pb-0">
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-10 md:gap-12">
             <motion.div
