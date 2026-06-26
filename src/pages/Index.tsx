@@ -35,18 +35,18 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden">
 
       {/* Hero */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16 md:pt-24 md:pb-0">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-10 md:gap-12">
             <motion.div
               style={{ y: heroY, opacity: heroOpacity }}
-              className="max-w-2xl flex-1"
+              className="max-w-2xl flex-1 text-center lg:text-left"
             >
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
+                className="text-primary font-medium mb-4 tracking-wide uppercase text-[11px] sm:text-sm"
               >
                 Product Designer · Developer · Mentor · Founder
               </motion.p>
@@ -54,12 +54,13 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.7 }}
-                className="text-5xl md:text-7xl font-bold font-display leading-tight mb-6"
+                className="text-4xl sm:text-5xl md:text-7xl font-bold font-display leading-[1.05] mb-6 break-words"
               >
                 Jennifer{" "}
                 <span className="text-gradient">Oluomachi</span>{" "}
                 Omojo
               </motion.h1>
+
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
