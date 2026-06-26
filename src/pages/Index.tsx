@@ -94,7 +94,7 @@ const Index = () => {
               className="flex-shrink-0"
             >
               <div className="relative">
-                <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_60px_-10px_hsl(25_95%_60%/0.35)]">
+                <div className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_60px_-10px_hsl(25_95%_60%/0.35)]">
                   <img
                     src="/images/profile.png"
                     alt="Jennifer Oluomachi Omojo"
