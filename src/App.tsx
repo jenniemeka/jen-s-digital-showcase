@@ -2,8 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useLayoutEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation, useNavigationType } from "react-router-dom";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import LofiBackground from "@/components/LofiBackground";
@@ -19,8 +19,11 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
+const ScrollManager = () => {
+  const { pathname, key } = useLocation();
+  const navType = useNavigationType(); // "POP" | "PUSH" | "REPLACE"
+  const positions = useRef<Map<string, number>>(new Map());
+  const lastKey = useRef<string>(key);
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -28,16 +31,32 @@ const ScrollToTop = () => {
     }
   }, []);
 
-  useLayoutEffect(() => {
-    const scrollTop = () => {
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
+  // Save scroll position before leaving the current entry
+  useEffect(() => {
+    const saveCurrent = () => {
+      positions.current.set(lastKey.current, window.scrollY);
     };
+    window.addEventListener("beforeunload", saveCurrent);
+    return () => {
+      saveCurrent();
+      window.removeEventListener("beforeunload", saveCurrent);
+    };
+  }, [pathname, key]);
 
-    scrollTop();
-    requestAnimationFrame(scrollTop);
-  }, [pathname]);
+  useLayoutEffect(() => {
+    lastKey.current = key;
+    if (navType === "POP") {
+      // Back/forward: restore saved position (or top if unknown)
+      const saved = positions.current.get(key) ?? 0;
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: saved, left: 0, behavior: "instant" as ScrollBehavior });
+      });
+    } else {
+      // New navigation: always top
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+      requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0 }));
+    }
+  }, [pathname, key, navType]);
 
   return null;
 };
@@ -66,7 +85,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
+        <ScrollManager />
         <LofiBackground />
         <Navbar />
         <AnimatedRoutes />

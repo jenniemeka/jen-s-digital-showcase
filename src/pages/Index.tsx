@@ -228,7 +228,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute -inset-2 bg-gradient-to-br from-primary/30 to-transparent rounded-xl blur-xl" />
                 <img
-                  src="/images/crowning-glory.jpg"
+                  src="/images/crowning-glory.png"
                   alt="Crowning Glory: A Natural Hair Journey book cover by Jennifer Omojo"
                   width={768}
                   height={1024}
