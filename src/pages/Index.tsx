@@ -240,7 +240,7 @@ const Index = () => {
 
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="text-primary" size={18} />
+                <BookOpen className="text-primary" size={18} />
                 <p className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wide">New Release · My First Book</p>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold font-display mb-3 leading-tight">
