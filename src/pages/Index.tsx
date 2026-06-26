@@ -206,6 +206,67 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* Book */}
+      <Section>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="glass rounded-2xl p-6 sm:p-10 md:p-12 relative overflow-hidden"
+        >
+          <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, rotate: -4 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: -3 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              whileHover={{ rotate: 0, scale: 1.02 }}
+              className="mx-auto md:mx-0 max-w-[260px] sm:max-w-xs w-full"
+            >
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-br from-primary/30 to-transparent rounded-xl blur-xl" />
+                <img
+                  src="/images/crowning-glory.jpg"
+                  alt="Crowning Glory: A Natural Hair Journey book cover by Jennifer Omojo"
+                  width={768}
+                  height={1024}
+                  loading="lazy"
+                  className="relative rounded-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] w-full h-auto"
+                />
+              </div>
+            </motion.div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Sparkles className="text-primary" size={18} />
+                <p className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wide">New Release · My First Book</p>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold font-display mb-3 leading-tight">
+                <span className="text-gradient">Crowning Glory</span>
+                <span className="block text-xl md:text-2xl text-foreground/90 font-semibold mt-1">A Natural Hair Journey</span>
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                A love letter to every curl, coil, and kink. Crowning Glory is a personal, tender, and practical guide to embracing natural hair, the lessons, the routines, and the self-love that come with the journey.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-7 shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]">
+                  <a href="https://jenniomojo.gumroad.com/l/crowning-glory" target="_blank" rel="noopener noreferrer">
+                    <BookOpen className="mr-1" size={18} /> Get on Gumroad
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="rounded-full px-7 border-border hover:bg-secondary">
+                  <a href="https://selar.com/whax65fib5" target="_blank" rel="noopener noreferrer">
+                    Buy on Selar <ExternalLink className="ml-1" size={16} />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </Section>
+
       {/* Mentorship */}
       <Section>
         <motion.div
