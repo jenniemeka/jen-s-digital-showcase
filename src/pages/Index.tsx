@@ -118,7 +118,7 @@ const Index = () => {
               I work at the intersection of <span className="text-gradient">technology, design, and education.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              My journey didn't start in a CS classroom. I studied Economics at ESTAM University in the Benin Republic, where I learned to think in systems and trade-offs - a way of thinking that still shapes how I design products today.
+              My journey didn't start in a CS classroom. I studied Economics at ESTAM University, where I learned to think in systems and trade-offs - a way of thinking that still shapes how I design products today.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Today, I co-found and build digital products, serve as COO at Programmify, and teach kids how to code from scratch. Each role feeds the others: building keeps me sharp, teaching keeps me honest, and mentorship keeps me connected to the people I'm building for.
