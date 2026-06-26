@@ -111,14 +111,9 @@ const About = () => {
               <GraduationCap className="text-primary mb-3" size={22} />
               <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">Education</p>
               <p className="font-semibold">B.Sc. Economics</p>
-              <p className="text-sm text-muted-foreground">ESTAM University, Benin Republic</p>
+              <p className="text-sm text-muted-foreground">ESTAM University</p>
             </div>
-            <div className="glass rounded-xl p-5">
-              <MapPin className="text-primary mb-3" size={22} />
-              <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">Based in</p>
-              <p className="font-semibold">Benin Republic</p>
-              <p className="text-sm text-muted-foreground">Working remotely across Africa & beyond</p>
-            </div>
+
             <div className="glass rounded-xl p-5">
               <Rocket className="text-primary mb-3" size={22} />
               <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">Currently</p>
