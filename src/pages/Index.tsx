@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Code2, Palette, Users, Rocket, ExternalLink, GraduationCap, Heart, BookOpen, Sparkles } from "lucide-react";
+import { ArrowRight, Code2, Palette, Users, Rocket, ExternalLink, GraduationCap, Heart, BookOpen } from "lucide-react";
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
