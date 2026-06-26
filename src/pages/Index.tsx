@@ -48,7 +48,7 @@ const Index = () => {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-primary font-medium mb-4 tracking-wide uppercase text-[11px] sm:text-sm"
               >
-                Product Designer · Developer · Mentor · Founder
+                AI Product Engineer · Mentor · Founder
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}

@@ -89,7 +89,7 @@ const About = () => {
               transition={{ delay: 0.1 }}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              I'm a product designer, developer, and tech founder based in the Benin Republic. I build digital tools that solve real problems, and I spend just as much time teaching the next generation of African builders how to write their first lines of code.
+              I'm a AI product engineer and tech founder based in the Benin Republic. I build digital tools that solve real problems, and I spend just as much time teaching the next generation of African builders how to write their first lines of code.
             </motion.p>
           </div>
         </div>
