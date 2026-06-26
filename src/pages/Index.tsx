@@ -22,7 +22,7 @@ const skills = [
 const stats = [
   { value: "6+", label: "Products shipped" },
   { value: "3", label: "Startups co-founded" },
-  { value: "100+", label: "Learners mentored" },
+  { value: "200+", label: "Learners mentored" },
 ];
 
 const Index = () => {
