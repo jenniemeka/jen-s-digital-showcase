@@ -7,6 +7,193 @@ import { Button } from "@/components/ui/button";
 
 const posts = [
   {
+    title: "How to Become an AI-Forward Engineer in 2026",
+    excerpt: "A practical roadmap for engineers who want to stay relevant — and thrive — as AI reshapes how software gets built.",
+    date: "Jun 2026",
+    readTime: "9 min read",
+    tags: ["AI", "Career", "Engineering"],
+    content: `The phrase "AI-forward engineer" gets thrown around a lot, but it actually means something specific: an engineer who treats AI as a first-class tool in their workflow, designs systems that integrate language models thoughtfully, and continuously adapts as the tooling evolves. It's not about replacing your craft — it's about extending it.
+
+Here's how to get there, based on what I've seen working with developers across the African tech ecosystem and from building AI-integrated products myself.
+
+**1. Master the fundamentals first.** This sounds counterintuitive, but AI-forward engineering is built on top of strong software engineering. You still need to understand data structures, system design, API contracts, version control, testing, and deployment. AI tools amplify your output — if your foundation is weak, they amplify the weaknesses too.
+
+**2. Learn how LLMs actually work — at least conceptually.** You don't need to train a model from scratch. But you should understand tokens, context windows, temperature, embeddings, vector databases, and the difference between fine-tuning, RAG (Retrieval Augmented Generation), and prompting. Resources like Andrej Karpathy's "Intro to LLMs" talk and Anthropic's prompting documentation are excellent starting points.
+
+**3. Get fluent with the modern AI toolchain.** As of 2026, the practical stack includes:
+- **Coding assistants** like Cursor, GitHub Copilot, Claude Code, and Lovable for building applications
+- **Model APIs** from OpenAI, Anthropic, Google, and open-weight options like Llama and Mistral
+- **Orchestration frameworks** like LangChain, LlamaIndex, and Vercel AI SDK
+- **Vector databases** like Pinecone, Weaviate, and pgvector
+- **Evaluation tools** like LangSmith, Braintrust, and Helicone for tracking model performance
+
+You don't need all of them. Pick one in each category and ship something real.
+
+**4. Build evaluation into your workflow.** This is what separates hobbyists from serious AI engineers. Models are non-deterministic — the same prompt can return different outputs. Without evals, you're flying blind. Learn to write test cases for prompts, measure quality with rubrics, and track regressions across model versions.
+
+**5. Learn prompt engineering as a real skill.** Good prompts are structured, specific, and tested. Study techniques like chain-of-thought, few-shot examples, system prompts, and structured outputs (JSON mode, function calling). Treat prompts like code — version them, review them, refactor them.
+
+**6. Understand the cost and latency trade-offs.** Every AI call costs money and time. AI-forward engineers design systems that route to the right model for the right task — a small fast model for classification, a large powerful model for reasoning. Caching, streaming, and smart batching are no longer optional.
+
+**7. Stay critical.** AI hype is loud. Not every problem needs a model. Sometimes a regex, a SQL query, or a simple rule beats an LLM in cost, latency, and reliability. The best AI engineers know when not to use AI.
+
+**8. Build in public.** Share what you're learning. Post your projects, write about what worked and what didn't, contribute to open source AI tools. The AI engineering community is small, fast-moving, and incredibly welcoming to people who show up consistently.
+
+**The mindset shift:** Stop thinking of yourself as "a developer who uses AI." Start thinking of yourself as someone who designs intelligent systems — where some logic lives in code, some in models, and some in the interplay between them. That mental model will carry you for the next decade.
+
+The engineers who thrive in this era won't be the ones with the deepest ML PhDs. They'll be the ones who can take a vague problem, decompose it, choose the right blend of deterministic code and AI, and ship something that actually works in production.`,
+  },
+  {
+    title: "Transitioning Into Tech From Any Field",
+    excerpt: "A grounded guide for career changers — from teachers and accountants to artists and lawyers — moving into tech in the AI era.",
+    date: "May 2026",
+    readTime: "8 min read",
+    tags: ["Career", "Transition", "Tech"],
+    content: `I transitioned into tech from Economics. I've mentored people who came from nursing, law, fashion design, banking, theology, and teaching. The path is real, but it looks different in 2026 than it did even three years ago. Here's an honest guide.
+
+**Your background is an asset, not a liability.** The tech industry is over-indexed on people who think the same way. A teacher understands learning psychology better than most developers. An accountant understands risk and compliance. A nurse understands high-stakes decision making under pressure. A designer understands taste. These perspectives are valuable — own them.
+
+**Step 1: Pick a direction based on what you already love.**
+
+Tech is not one career. It's dozens. Some paths that match common backgrounds:
+
+- **Teachers → Developer Education, Technical Writing, Curriculum Design, Developer Relations**
+- **Accountants/Finance → FinTech Product, Data Analytics, Revenue Operations, Compliance Engineering**
+- **Designers/Artists → Product Design, UX Research, Brand Engineering, Creative Technology**
+- **Lawyers → Legal Tech, Policy, Trust & Safety, Privacy Engineering**
+- **Healthcare → Health Tech Product, Clinical AI, Medical Data Science**
+- **Writers → Content Design, Technical Writing, Prompt Engineering, Developer Advocacy**
+
+Don't try to become a generic "developer." Pick the intersection of tech and your existing expertise — that's where you'll move fastest and stand out most.
+
+**Step 2: Build foundational literacy.**
+
+Even if you're not going to be a full-time coder, you need basic tech literacy in 2026:
+- How the web works (HTTP, browsers, servers, databases)
+- How to use Git and GitHub
+- Basic HTML, CSS, and JavaScript or Python
+- How AI tools work and how to use them effectively
+- How to read documentation
+
+You can get this through free resources: freeCodeCamp, The Odin Project, CS50 from Harvard, and YouTube. You don't need a bootcamp for the basics.
+
+**Step 3: Use AI as your unfair advantage.**
+
+This is the biggest shift from older "switch to tech" advice. Tools like Lovable, Cursor, and ChatGPT let you build real products faster than ever. A career changer in 2026 can ship a working app in their first month — something that took six months in 2020.
+
+Use AI to:
+- Explain concepts you don't understand
+- Debug your code
+- Generate starter projects you can then modify and learn from
+- Review your work and suggest improvements
+
+But — don't skip the understanding. AI is a tutor and accelerator, not a replacement for learning. If you copy code you don't understand, you'll hit a wall fast.
+
+**Step 4: Build a portfolio of real things.**
+
+Forget tutorials after the first month. Build things that solve problems you actually have. A teacher could build a quiz generator. An accountant could build an invoice tracker. A fitness coach could build a workout logger. Real problems make for real portfolios and real conversations in interviews.
+
+**Step 5: Get into community.**
+
+This is where most career changers fail. They learn in isolation, get discouraged, and quit. Find your people:
+- Twitter/X tech community
+- Local meetups and tech hubs (in Africa: Andela Learning Community, Programmify, ALX, Lagos Tech Fest)
+- Discord servers for specific tools (Lovable, Cursor, Next.js)
+- Open source contributions
+
+Community gives you accountability, feedback, and eventually job referrals.
+
+**Step 6: Bridge, don't leap.**
+
+If possible, transition gradually. Take on side projects in your current role that use tech. A teacher might digitize their school's reporting system. A lawyer might automate document review. This builds your portfolio while you still have income, and it makes the eventual leap feel natural rather than terrifying.
+
+**A note on timelines:** Most successful transitions I've seen take 9 to 18 months from "I want to do this" to "I have a tech role." Anyone promising you a 3-month transition is selling you something. Anyone telling you it takes 5 years is gatekeeping. Pace yourself.
+
+**The truth nobody says:** Transitioning into tech is hard. There will be days you feel stupid. There will be applications that go nowhere. There will be moments you want to quit. That's normal. The people who make it through aren't the smartest — they're the most consistent. Show up daily, even when it's hard. That's the whole secret.
+
+You're not behind. You're early. The AI era is rewriting the rules, and that means there's room for people who think differently. That includes you.`,
+  },
+  {
+    title: "New Roles Emerging in the AI Era",
+    excerpt: "The job titles that didn't exist five years ago — and what they actually do. A guide to where tech careers are heading.",
+    date: "Apr 2026",
+    readTime: "7 min read",
+    tags: ["AI", "Future of Work", "Careers"],
+    content: `Every technological shift creates new job categories. The internet gave us web developers, social media managers, and SEO specialists. Mobile gave us iOS engineers and mobile product managers. AI is doing the same — but faster. Here are the roles that have emerged or matured in the last two years, what they actually do, and how to position yourself for them.
+
+**1. AI Engineer**
+
+Not to be confused with ML engineers (who train models), AI engineers build applications on top of existing models. They design prompts, orchestrate model calls, integrate vector databases, set up evaluation pipelines, and ship AI features to production. This is one of the fastest-growing roles in tech, and the bar is more about systems thinking than deep math.
+
+**Skills needed:** Strong software engineering, API design, prompt engineering, basic LLM intuition, eval frameworks.
+
+**2. Prompt Engineer / Prompt Architect**
+
+A few years ago people debated whether this was a real role. It is — but it has evolved. Pure prompt engineers are rare; the role has merged into AI engineering and product work. However, "Prompt Architects" exist at larger companies, designing the prompt systems that power customer-facing AI products. Think of them as the API designers of the LLM age.
+
+**3. AI Product Manager**
+
+Traditional PMs ship features. AI PMs ship probabilistic systems. They have to think about model selection, evaluation, hallucination risk, user trust, latency budgets, and the unique UX patterns AI products demand. Companies are paying premiums for PMs who deeply understand both product and AI capabilities.
+
+**4. AI Solutions Architect**
+
+The enterprise-facing role. They work with companies to figure out where AI can actually help (and where it can't), design the integration architecture, and lead implementation. Heavy on consulting skills, light on coding. Great fit for ex-consultants and senior engineers who like working with humans.
+
+**5. Evaluation Engineer**
+
+A specialized role focused entirely on measuring AI quality. They build datasets, design rubrics, run experiments, and create the feedback loops that let teams ship AI features with confidence. As AI moves into regulated industries, this role is exploding.
+
+**6. AI Safety & Trust Engineer**
+
+Focused on making AI systems reliable, fair, and safe. They red-team models, design guardrails, build content moderation pipelines, and ensure compliance with emerging AI regulations like the EU AI Act. The role spans engineering, ethics, and policy.
+
+**7. Data Curator / Data Annotator Lead**
+
+Models are only as good as their data. As companies fine-tune models or build evaluation sets, they need people who can design data collection strategies, manage annotation teams, and ensure data quality. This role often grows out of operations or research backgrounds.
+
+**8. AI-Augmented Developer**
+
+Not a new title — but the job has fundamentally changed. Modern developers ship 3 to 5 times more code than they did in 2022, primarily because they're using AI coding assistants effectively. The skill isn't just writing code anymore; it's directing, reviewing, and verifying AI-generated code.
+
+**9. Agent Engineer**
+
+A newer specialty focused on building autonomous AI agents — systems that take actions, use tools, and complete multi-step tasks. Requires understanding of agent frameworks (LangGraph, AutoGen, Claude Agent SDK), tool design, and failure-mode handling.
+
+**10. AI Ops / LLMOps Engineer**
+
+The DevOps of AI. They manage model deployment, monitor inference costs, handle scaling, set up observability for LLM apps, and manage the infrastructure that keeps AI systems running. As AI moves into production at scale, this role becomes critical.
+
+**11. Conversational Designer**
+
+Designers who specialize in voice and chat interfaces. They craft how AI products talk — tone, personality, error handling, recovery flows. Increasingly important as voice agents and chat-first products multiply.
+
+**12. AI Educator / Developer Advocate (AI)**
+
+Companies building AI tools need people who can teach developers how to use them well. This role blends teaching, content creation, community building, and technical depth. Great fit for people coming from teaching or content backgrounds.
+
+**13. AI Ethicist / Policy Specialist**
+
+As governments regulate AI, companies need people who understand both the technology and the policy landscape. Roles range from internal ethics review to external regulatory affairs. Background in law, philosophy, or social science is often a strength here.
+
+**14. Synthetic Media Specialist**
+
+Designers and creatives who work with generative image, video, and audio tools. They produce marketing assets, product visuals, and creative work at a scale previously impossible. The good ones combine craft, taste, and tool fluency.
+
+**15. Founder / Solo Operator**
+
+Maybe the most underrated "new role." AI has dropped the cost of building software so dramatically that solo founders can now build products that used to require teams of ten. The number of profitable one-person companies is growing fast.
+
+**What this means for you:**
+
+If you're early in your career, don't chase titles — chase skills. The titles will change again in two years. The underlying capabilities (systems thinking, prompt design, evaluation, product sense, AI literacy) will compound.
+
+If you're mid-career, find the intersection of your existing expertise and AI. A marketer who understands AI is more valuable than a generic AI engineer. Same for lawyers, teachers, designers, and operators.
+
+If you're a leader, start hiring for these roles now. The companies that build AI capability into their teams in 2026 will outpace everyone else by 2028.
+
+The AI era isn't coming. It's here. The good news? It's still early enough to be part of shaping what comes next.`,
+  },
+  {
     title: "Building Startups as a Solo Founder",
     excerpt: "Lessons learned from building multiple products from scratch — the wins, failures, and everything in between.",
     date: "Mar 2026",
