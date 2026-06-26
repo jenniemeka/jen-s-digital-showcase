@@ -8,15 +8,11 @@ import { Button } from "@/components/ui/button";
 
 const roles = [
   {
-    icon: Palette,
-    title: "Product Designer",
-    desc: "I design intuitive, user-centered interfaces - from early wireframes to polished, shippable products. I care about clarity, hierarchy, and the small details that make software feel calm to use.",
-  },
-  {
     icon: Code2,
-    title: "Developer",
-    desc: "I build full-stack web apps with React, TypeScript, and modern tooling. I enjoy turning fuzzy ideas into working products that real people can hold in their hands.",
+    title: "AI Product Engineer",
+    desc: "I design and build full-stack web apps with React, TypeScript, and modern AI tooling - from early wireframes and product thinking to polished, shippable products that feel calm to use.",
   },
+
   {
     icon: Heart,
     title: "Mentor & Instructor",
