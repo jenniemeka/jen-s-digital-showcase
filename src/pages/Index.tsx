@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 
 const projects = [
+  { name: "FastCV", desc: "Editorial resume builder, ATS-ready", url: "https://fastcv.shop", image: "/images/fastcv.png" },
+  { name: "PeerDrift", desc: "Real-time room for sharing across devices", url: "https://peerdrift.lovable.app", image: "/images/peerdrift.png" },
   { name: "Tymflow", desc: "Digital workflow platform for productivity", url: "https://tymflow.vercel.app", image: "/images/tymflow.png" },
-  { name: "Programmify Academy", desc: "Learn programming through mentorship", url: "https://academy.programmify.org", image: "/images/programmify.png" },
-  { name: "Tendly", desc: "Privacy-first file sharing platform", url: "https://tendly.xyz", image: "/images/tendly.png" },
 ];
 
 const skills = [
