@@ -56,10 +56,6 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-3 -right-3 px-3 py-2 rounded-xl bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center gap-1.5">
-                <MapPin size={14} className="text-primary" />
-                <span className="text-xs font-medium">Benin Republic</span>
-              </div>
             </div>
           </motion.div>
 
