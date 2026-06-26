@@ -16,7 +16,7 @@ const projects = [
     name: "PeerDrift",
     url: "https://peerdrift.lovable.app",
     image: "/images/peerdrift.png",
-    desc: "A real-time room for sharing files, text, and links across devices. No accounts, no tracking - rooms self-destruct after 30 minutes.",
+    desc: "A real-time room for sharing files, text, and links across devices. No accounts, no tracking, rooms self-destruct after 30 minutes.",
     role: "Builder",
     tags: ["File Sharing", "Real-time", "Privacy"],
   },
