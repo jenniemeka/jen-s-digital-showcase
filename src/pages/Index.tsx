@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Code2, Palette, Users, Rocket, ExternalLink } from "lucide-react";
+import { ArrowRight, Code2, Palette, Users, Rocket, ExternalLink, GraduationCap, Heart } from "lucide-react";
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -13,10 +13,16 @@ const projects = [
 ];
 
 const skills = [
-  { icon: Palette, label: "Product Design", desc: "UI/UX, Figma, Design Systems" },
-  { icon: Code2, label: "Development", desc: "React, TypeScript, Next.js" },
-  { icon: Users, label: "Mentorship", desc: "Teaching coding to beginners" },
-  { icon: Rocket, label: "Startups", desc: "Building & shipping products" },
+  { icon: Palette, label: "Product Design", desc: "UI/UX, Figma, design systems with care for detail" },
+  { icon: Code2, label: "Development", desc: "React, TypeScript, and modern web tooling" },
+  { icon: Users, label: "Mentorship", desc: "Teaching kids and beginners how to code from scratch" },
+  { icon: Rocket, label: "Startups", desc: "Co-founding and shipping products end-to-end" },
+];
+
+const stats = [
+  { value: "6+", label: "Products shipped" },
+  { value: "3", label: "Startups co-founded" },
+  { value: "100+", label: "Learners mentored" },
 ];
 
 const Index = () => {
@@ -42,7 +48,7 @@ const Index = () => {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
               >
-                Developer · Mentor · Founder
+                Product Designer · Developer · Mentor · Founder
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -60,7 +66,7 @@ const Index = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
               >
-                I build digital products, teach people how to code, and create tools that empower individuals and communities.
+                I design, build, and ship digital products — and I teach the next generation of African builders how to write their first lines of code. Based in the Benin Republic, working across the web.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -102,9 +108,39 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Skills */}
+      {/* About preview */}
       <Section>
-        <SectionHeading title="What I Do" subtitle="Combining design, code, and mentorship to build impactful solutions." />
+        <div className="grid lg:grid-cols-3 gap-10 items-start">
+          <div className="lg:col-span-2 space-y-5">
+            <p className="text-primary font-medium text-sm uppercase tracking-wide">A little about me</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-display leading-tight">
+              I work at the intersection of <span className="text-gradient">technology, design, and education.</span>
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              My journey didn't start in a CS classroom. I studied Economics at ESTAM University in the Benin Republic, where I learned to think in systems and trade-offs — a way of thinking that still shapes how I design products today.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Today, I co-found and build digital products, serve as COO at Programmify, and teach kids how to code from scratch. Each role feeds the others: building keeps me sharp, teaching keeps me honest, and mentorship keeps me connected to the people I'm building for.
+            </p>
+            <Button asChild variant="outline" className="rounded-full mt-2">
+              <Link to="/about">Read my full story <ArrowRight className="ml-2" size={16} /></Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-3 lg:grid-cols-1 gap-4">
+            {stats.map((s) => (
+              <div key={s.label} className="glass rounded-xl p-5 text-center lg:text-left">
+                <p className="text-3xl font-bold font-display text-gradient">{s.value}</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-tight">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Skills */}
+      <Section className="bg-card/30">
+        <SectionHeading title="What I Do" subtitle="Different hats, one mission — build useful things and bring people along." />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, i) => (
             <motion.div
@@ -126,9 +162,9 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* Featured Projects with parallax */}
-      <Section className="bg-card/30">
-        <SectionHeading title="Featured Projects" subtitle="A selection of products I've built and co-founded." />
+      {/* Featured Projects */}
+      <Section>
+        <SectionHeading title="Featured Projects" subtitle="A selection of products I've built and co-founded — each one starts with a real problem worth solving." />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <motion.a
@@ -177,12 +213,15 @@ const Index = () => {
         >
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
           <div className="max-w-2xl relative z-10">
-            <p className="text-primary font-medium text-sm uppercase tracking-wide mb-3">Mentorship</p>
+            <div className="flex items-center gap-2 mb-3">
+              <Heart className="text-primary" size={18} />
+              <p className="text-primary font-medium text-sm uppercase tracking-wide">Mentorship</p>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-              Nurturing the Next Generation
+              Teaching kids and beginners to code from scratch
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I mentor aspiring developers and teach young students how to code from scratch. Through Programmify, I'm helping build confidence in the next generation of African tech talent.
+              Through Programmify, I mentor aspiring developers and run a kids' programming track — guiding learners as young as 8 through their first variables, loops, and finished projects. Watching a kid go from "I can't do this" to confidently demoing their own app is the entire point.
             </p>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8">
               <Link to="/about">Learn More</Link>
@@ -200,10 +239,10 @@ const Index = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-            Let's Build Something <span className="text-gradient">Together</span>
+            Let's build something <span className="text-gradient">meaningful</span>
           </h2>
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-            Have an idea, project, or collaboration in mind? I'd love to hear from you.
+            Whether you want to collaborate, hire me, or just say hi — my inbox is open.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 shadow-[0_0_30px_-5px_hsl(25_95%_60%/0.4)]">
             <Link to="/contact">Get In Touch</Link>
