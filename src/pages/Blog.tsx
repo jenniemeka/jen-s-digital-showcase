@@ -371,7 +371,7 @@ const Blog = () => {
                 Back to all articles
               </Button>
 
-              <article className="glass rounded-2xl p-5 sm:p-8 md:p-12 max-w-3xl mx-auto">
+              <article className="max-w-4xl mx-auto">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {posts[selectedPost].tags.map((tag) => (
                     <span key={tag} className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-medium">
@@ -384,12 +384,12 @@ const Blog = () => {
                   <span>·</span>
                   <span className="flex items-center gap-1"><Clock size={14} /> {posts[selectedPost].readTime}</span>
                 </div>
-                <h1 className="font-display font-bold text-3xl md:text-4xl mb-8 leading-tight">
+                <h1 className="font-display font-bold text-3xl md:text-5xl mb-8 leading-tight">
                   {posts[selectedPost].title}
                 </h1>
                 <div className="prose prose-invert max-w-none">
                   {posts[selectedPost].content.split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-muted-foreground leading-relaxed mb-4 text-[15px]">
+                    <p key={i} className="text-muted-foreground leading-relaxed mb-5 text-base md:text-lg">
                       {paragraph.split('**').map((part, j) =>
                         j % 2 === 1 ? (
                           <strong key={j} className="text-foreground font-semibold">{part}</strong>
