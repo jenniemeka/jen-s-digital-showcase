@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import SectionHeading from "@/components/SectionHeading";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Heart, Code2, Rocket, GraduationCap, Sparkles, Users2 } from "lucide-react";
+import { Heart, Code2, Rocket, GraduationCap, Target, Users2 } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
