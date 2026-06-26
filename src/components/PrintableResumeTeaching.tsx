@@ -23,7 +23,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
           Jennifer Oluomachi Omojo
         </h1>
         <p className="text-sm text-gray-600 mt-1 font-medium">
-          Programming Instructor - Mentor - Tech Educator
+          Programming Instructor, Mentor, Tech Educator
         </p>
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-0.5 mt-1.5 text-[11px] text-gray-500">
           <span>jenniferemeka24@gmail.com</span>
@@ -51,7 +51,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
         <div className="mb-3">
           <div className="flex justify-between items-baseline">
             <h3 className="font-bold text-gray-900">Programming Instructor (Kids)</h3>
-            <span className="text-[11px] text-gray-500 shrink-0 ml-4">Jan 2026 - Mar 2026</span>
+            <span className="text-[11px] text-gray-500 shrink-0 ml-4">Jan 2026, Mar 2026</span>
           </div>
           <p className="text-gray-600 italic text-[11px] mb-1">Programmify</p>
           <ul className="list-disc pl-4 space-y-0.5 text-gray-700">
@@ -66,7 +66,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
         <div className="mb-3">
           <div className="flex justify-between items-baseline">
             <h3 className="font-bold text-gray-900">Programming Instructor (Kids)</h3>
-            <span className="text-[11px] text-gray-500 shrink-0 ml-4">Jan 2025 - Present</span>
+            <span className="text-[11px] text-gray-500 shrink-0 ml-4">Jan 2025, Present</span>
           </div>
           <p className="text-gray-600 italic text-[11px] mb-1">Programmify</p>
           <ul className="list-disc pl-4 space-y-0.5 text-gray-700">
@@ -81,7 +81,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
         <div className="mb-3">
           <div className="flex justify-between items-baseline">
             <h3 className="font-bold text-gray-900">Mentor & Tech Educator</h3>
-            <span className="text-[11px] text-gray-500 shrink-0 ml-4">2024 - Present</span>
+            <span className="text-[11px] text-gray-500 shrink-0 ml-4">2024, Present</span>
           </div>
           <p className="text-gray-600 italic text-[11px] mb-1">Programmify Labs / Community Programs</p>
           <ul className="list-disc pl-4 space-y-0.5 text-gray-700">
@@ -94,7 +94,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
         <div className="mb-3">
           <div className="flex justify-between items-baseline">
             <h3 className="font-bold text-gray-900">Co-Founder & Head of Education</h3>
-            <span className="text-[11px] text-gray-500 shrink-0 ml-4">Jan 2023 - Present</span>
+            <span className="text-[11px] text-gray-500 shrink-0 ml-4">Jan 2023, Present</span>
           </div>
           <p className="text-gray-600 italic text-[11px] mb-1">Programmify</p>
           <ul className="list-disc pl-4 space-y-0.5 text-gray-700">
@@ -112,8 +112,8 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
           Educational Projects & Platforms
         </h2>
         <ul className="list-disc pl-4 space-y-0.5 text-gray-700">
-          <li><strong>Programmify Academy</strong> (academy.programmify.org) - Built an online learning platform providing structured coding lessons and mentorship for beginners</li>
-          <li><strong>Tymflow</strong> (tymflow.vercel.app) - Developed a productivity platform used to teach students project management and workflow concepts</li>
+          <li><strong>Programmify Academy</strong> (academy.programmify.org), Built an online learning platform providing structured coding lessons and mentorship for beginners</li>
+          <li><strong>Tymflow</strong> (tymflow.vercel.app), Developed a productivity platform used to teach students project management and workflow concepts</li>
         </ul>
       </div>
 
@@ -134,7 +134,7 @@ const PrintableResumeTeaching = ({ resumeRef }: { resumeRef: React.RefObject<HTM
         <div className="flex flex-wrap gap-x-2 gap-y-0.5 text-gray-700">
           {teachingSkills.map((skill, i) => (
             <span key={skill}>
-              {skill}{i < teachingSkills.length - 1 ? " ·" : ""}
+              {skill}{i < teachingSkills.length, 1 ? " ·" : ""}
             </span>
           ))}
         </div>
