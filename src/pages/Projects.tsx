@@ -5,6 +5,22 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    name: "FastCV",
+    url: "https://fastcv.shop",
+    image: "/images/fastcv.png",
+    desc: "An editorial resume builder with quiet typography and ATS-ready templates. Build for free, pay only when you're ready to download.",
+    role: "Builder",
+    tags: ["Resume", "EdTech", "Career"],
+  },
+  {
+    name: "PeerDrift",
+    url: "https://peerdrift.lovable.app",
+    image: "/images/peerdrift.png",
+    desc: "A real-time room for sharing files, text, and links across devices. No accounts, no tracking - rooms self-destruct after 30 minutes.",
+    role: "Builder",
+    tags: ["File Sharing", "Real-time", "Privacy"],
+  },
+  {
     name: "Tymflow",
     url: "https://tymflow.vercel.app",
     image: "/images/tymflow.png",
