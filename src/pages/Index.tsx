@@ -67,7 +67,7 @@ const Index = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
               >
-                I design, build, and ship digital products - and I teach the next generation of African builders how to write their first lines of code. Based in the Benin Republic, working across the web.
+                I design, build, and ship digital products - and I teach the next generation of African builders how to write their first lines of code.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
